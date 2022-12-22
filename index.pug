@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title My experience still here, and ready to evolve!
+  body 
+    .wrapper
+      section.section.first.fc.fc-a-s
+        .container
+          header.header
+            a(href="#" target="_blank") 
+              img.logo(src="./assets/images/logo.svg", alt="logo")
+
+          h1.title  Lorem Ipsum
+          h2.subtitle 
+            | here is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+          a.btn(href="#" target="_blank")
+            | Lorem
+
+
+      section.section.second
+        .container
+          h3.title.tac What is Lorem Ipsum?
+
+          figure.h-card.fc.fc-a-c.fc-btw
+            img.image(src="./assets/images/card1.jpg" alt="Card Image")
+            figcaption.description
+              h4.title Why do we use it?
+              p.txt 
+                | t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+              ul.list 
+                each val in ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Cras feugiat nisl nec purus sollicitudin, efficitur sollicitudin nunc tincidunt.','Integer malesuada erat et vestibulum rutrum.','Aliquam maximus purus vitae pulvinar eleifend.']
+                  li.item.fc.fc-a-s
+                    = val
+                    //- css before need
+          
+          figure.h-card.fc.fc-a-c.fc-btw
+            img.image(src="./assets/images/card2.jpg" alt="Card Image")
+            figcaption.description
+              h4.title Why do we use it?
+              p.txt 
+                | t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+              ul.list 
+                each val in ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Cras feugiat nisl nec purus sollicitudin, efficitur sollicitudin nunc tincidunt.','Integer malesuada erat et vestibulum rutrum.','Aliquam maximus purus vitae pulvinar eleifend.']
+                  li.item.fc.fc-a-s
+                    = val
+                    //- css before need
+                    
+
+                
+
+      section.section.third.fc.fc-c.fc-a-c
+        .container
+          h3.title 
+            | here is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+          a.btn(href="#" target="_blank")
+            | Lorem
+
+      c-footer
+
+    script(src='./index.js')
+  

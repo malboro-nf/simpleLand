@@ -1,0 +1,19 @@
+{
+  "name": "some_land",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./index.pug --open",
+    "build": "parcel build ./index.pug --public-url ./"
+  },
+  "author": "nf_malboro",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.11",
+    "postcss": "^8.2.15",
+    "pug": "^3.0.2",
+    "sass": "^1.57.1"
+  }
+}

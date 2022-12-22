@@ -1,0 +1,41 @@
+@import '/assets/style/tools.scss';
+
+$Shark: #2a2b30;
+
+.footer {
+  padding: 15px 20px 25px 20px;
+  background-color: $Shark;
+
+  .container {
+    max-width: 1100px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+    }
+
+    & > p {
+      margin-bottom: 15px;
+    }
+  }
+
+  .rights {
+    @include font(14px, 1, #cecece);
+
+    max-width: 750px;
+  }
+
+  .links {
+    @include font(12px, 1, #f9fba9);
+
+    text-decoration: none;
+
+    a {
+      padding-right: 10px;
+    }
+  }
+
+  .copy {
+    @include font(10px, 1, #f7f7f7);
+  }
+}
+  

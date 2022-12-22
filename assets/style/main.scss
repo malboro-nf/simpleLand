@@ -1,0 +1,275 @@
+@import '/assets/style/tools.scss';
+
+
+// colors names from https://chir.ag/projects/name-that-color/#0E1017
+
+$Bunker :#0E1017;
+$Mustard: #ffe14b;
+$Shark: #2a2b30;
+$Rajah: #f1cda8;
+
+
+
+.fc {
+  display:flex;
+
+
+  &-c {
+    justify-content: center;
+  }
+  &-a-s{
+    align-items: flex-start;
+  }
+  &-a-c{
+    align-items: center;
+  }
+  &-wr {
+    flex-wrap: wrap;
+  }
+  &-arnd {
+    justify-content: space-around;
+  }
+  &-btw {
+    justify-content: space-between;
+  }
+  &-wr-r {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.tac {
+text-align: center;
+}
+
+body {
+    background-color: $Bunker;
+    color: white;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  margin-bottom: 2vw;
+
+  @media screen and (max-width: 812px) {
+    margin-bottom: 35px;
+  }
+}
+
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 20px;
+    }
+}
+
+.logo {
+  max-width: 150px;
+
+  @media screen and (max-width: 812px) {
+    max-width: 110px;
+  }
+}
+
+.title {
+ @include font(60px, 1.25, white);
+
+ margin-bottom: 45px;
+
+  @media screen and (max-width: 1024px) {
+    @include font(35px, 1.2)
+  }
+
+  @media screen and (max-width: 812px) {
+    @include font(28px, 1.1)
+  }
+
+  @media screen and (max-width: 530px) {
+    @include font(24px, 1.1)
+  }
+}
+
+.subtitle {
+  @include font(24px, 1.1, white);
+  
+  margin-bottom: 35px;
+  font-weight: 500;
+
+
+  @media screen and (max-width: 812px) {
+    @include font(18px, 1.1)
+  }
+
+  @media screen and (max-width: 530px) {
+    @include font(18px);
+  }
+}
+
+.btn {
+  @include font(21px, 1.2, black);
+
+  display: inline-block;
+  background-color: $Mustard;
+  border-radius: 15px;
+  padding: 10px 28px;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: $Rajah;
+  }
+
+  @media screen and (max-width: 812px) {
+    @include font(18px, 1.1)
+  }
+}
+
+.section {
+  min-height: 100vh;
+  padding: 3vw 0;
+
+  @media screen and (max-width: 812px) {
+    padding: 35px 0 45px 0;
+  }
+  
+  &.first {
+    background-image: url('/assets/images/bg.svg');
+    background-size: cover;
+    background-position: bottom;
+
+    .subtitle {
+      max-width: 500px;
+    }
+  }
+
+  &.second {
+    .title {
+      @include font(50px, 1.25, white);
+
+      @media screen and (max-width: 1024px) {
+        @include font(35px, 1.2)
+      }
+    
+      @media screen and (max-width: 812px) {
+        @include font(28px, 1.1)
+      }
+    
+      @media screen and (max-width: 530px) {
+        @include font(25px, 1.1)
+      }
+    }
+    .h-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+  &.third {
+    position: relative;
+    min-height: 80vh;
+    background-image: url('/assets/images/bg2.jpeg');
+    background-size: cover;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25    ,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+
+
+.h-card {
+  margin-bottom: 45px;
+  & > * {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 850px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .image {
+    @media screen and (max-width: 850px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .description {
+    padding: 0 10px;
+    .title {
+      @include font(32px, 1.2, white);
+
+      margin-bottom: 20px;
+      font-weight: 500;
+
+      @media screen and (max-width: 1024px) {
+        @include font(26px, 1.2)
+      }
+    
+      @media screen and (max-width: 812px) {
+        @include font(21px, 1.1)
+      }
+    
+      @media screen and (max-width: 530px) {
+        @include font(18px, 1.1)
+      }
+    }
+
+    .txt {
+      @include font(16px, 1.1, white);
+
+      margin-bottom: 15px;
+      font-weight: 400;
+
+      @media screen and (max-width: 812px) {
+        @include font(14px, 1.1)
+      }
+
+      @media screen and (max-width: 530px) {
+        @include font(12px, 1.1)
+      }
+  
+    }
+  }
+
+  .list {
+    .item {
+      @include font(16px, 1.1, white);
+      
+      margin-bottom: 15px;
+      font-weight: 300;
+
+      @media screen and (max-width: 812px) {
+        @include font(14px, 1.1)
+      }
+
+      &:before {
+        @include font(40px, 0, $Mustard);
+        
+        content: '•';
+        padding: 10px 15px 0 0px; 
+      }
+    }
+  }
+}
+
